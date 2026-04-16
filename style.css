@@ -396,22 +396,93 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Header & Navigation */
+    header, header.scrolled {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .logo {
+        margin-bottom: 15px;
+        flex-direction: column; /* Add this to stack the icon and text */
+        text-align: center;
+    }
+    .logo img {
+        height: 55px;
+        margin-bottom: 8px; /* space between icon and text */
+    }
+    .logo span {
+        font-size: 1.4rem;
+        margin-left: 0; /* Remove left margin on mobile */
+        white-space: nowrap; /* Prevent title from breaking into multiple tiny lines */
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    
+    /* Layout & Spacing */
+    section {
+        padding: 60px 5%;
+    }
+    
+    /* Hero Section */
     .hero {
         justify-content: center;
         text-align: center;
-        padding-top: 120px;
+        padding-top: 160px; /* Accounts for taller stacked header */
     }
     .hero-content {
-        padding: 30px 20px;
-        margin-bottom: 0;
+        padding: 25px 15px;
     }
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
-    .contact-form {
-        grid-template-columns: 1fr;
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
-    .form-group.full-width {
-        grid-column: span 1;
+    
+    /* Typography */
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    
+    /* Layout fixes */
+    .menu-grid {
+        gap: 30px;
+    }
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .price {
+        align-self: flex-end;
+    }
+    .location-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .map-container {
+        height: 300px;
+    }
+    .review-card.featured-review {
+        padding: 25px 15px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 40px 5%;
+    }
+    .footer-logo img {
+        height: 60px;
+    }
+    .footer-logo span {
+        font-size: 1.5rem;
     }
 }
